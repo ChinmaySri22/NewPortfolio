@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "General Sans";
+    background-color: black;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+@font-face {
+    font-family: "General Sans";
+    src: url('/fonts/GeneralSans-Regular.otf');
+}
+
+#home {
+    height: 100vh;
+    background-color: black;
+    width: 100%;
+    color: beige;
+    position: relative;
+}
+
+#main{
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: beige;
+}
+
+#nav{
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 1.1rem;
+    align-items: center;
+}
+
+#heading{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+
+.bounding .boundingelem{
+    transform: translateY(100%);
+}
+
+#nav a{
+    font-weight: 600;
+}
+
+#heading h1{
+    margin-left: 20px;
+    opacity: .7;
+    line-height: 1;
+    width: 100%;
+    font-size: 9vw;
+    text-transform: uppercase;
+}
+
+#heading #second-h1{
+    margin-left: 13vw;
+}
+#heading h4{
+    text-align: right;
+    font-size: 16px;
+}
+
+#subsubhead{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 16px;
+    margin-top: 200px;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "General Sans";
+    position: absolute;
+    width: 100%;
+    bottom: 2%;
+    
+}
+
+#footer #iconset{
+    display: flex;
+    gap: 4px;
+}
+
+#footer .circle{
+    background-color: white;
+    color: black;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+#second {
+    color: white;
+    padding-top: 10vw;
+    background-color: black;
+    width: 100%;
+}
+
+.elem{
+    position: relative;
+    display: flex;
+    opacity: 60%;
+    padding-top: 4.5vw;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vw;
+    font-size: 3vw;
+    border-top: .2px solid #888;
+}
+
+#elemlast{
+    padding-bottom: 4vw;
+    border-bottom: .2px solid #888;
+}
+
+.elem img {
+    opacity: 0;
+    z-index: 99999999;
+    height: 140%;
+    position: absolute;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+#footerr {
+    padding: 5vw;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    color: white;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+}
+
+#footerr img{
+    margin-left: 200px;
+    height: 15vw;
+    border-radius: 50%;
+}
+
+.btn {
+    margin: 4vw;
+    border: 1px solid white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+#aboutme {
+    align-items: center;
+    align-content: center;
+    max-width: 500px;
+    line-height: 1.6;
+    font-size: larger;
+}
+
+#footerr .btn{
+    font-size: 15px;
+}
+
+#bottom{
+  background-color: transparent;
+  color: beige;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10001; /* above pointercircle if needed */
+}
+#bottomright {
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+#bottomleft{
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+#pointercircle{
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  background-color: white;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: fixed;        /* fixed is safer */
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  pointer-events: none;   /* IMPORTANT: won't block footer clicks */
+}
+
+#project {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(59, 59, 59, 0.6); /* slight transparency */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.close {
+  color: #aaa;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  width: 50px;
+  border-radius: 50%;
+  text-align: center;}
+
+.close:hover,
+.close:focus {
+  color: red;
+  background-color: beige;
+  text-decoration: none;
+}
